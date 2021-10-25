@@ -1,0 +1,5 @@
+Create a table with current timestamp and explode an array
+
+select X.a, t.interval from 
+(select cast(current_timestamp as timestamp) as a , array [1,2,3,4] as b ) as X 
+cross join unnest (b) as t(interval) 
