@@ -1,0 +1,28 @@
+create table X (A int);
+create table Y (B int);
+
+insert into X values(1);
+insert into X values(2);
+insert into X values(3);
+
+insert into Y values(1);
+insert into Y values(2);
+insert into Y values(3);
+insert into Y values(4);
+insert into Y values(5);
+
+
+select X.A,Y.B 
+from X
+right join Y on (X.A=Y.B);
+
+select X.A,Y.B 
+from X
+left join Y on (X.A=Y.B);
+
+select X.A,Y.B 
+from X
+inner join Y on (X.A=Y.B);
+
+
+
