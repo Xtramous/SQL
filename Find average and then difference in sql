@@ -1,0 +1,13 @@
+create table abc (id int,salary int);
+
+insert into abc values(1,10000);
+insert into abc values(2,10000);
+insert into abc values(3,5000);
+insert into abc values(4,5000);
+insert into abc values(5,5000);
+
+
+select y.id,(y.salary-a) as diff from
+(select avg(salary) as a from abc) x
+cross join abc y
+;
