@@ -1,0 +1,13 @@
+create table cumsum(id int,salary int);
+
+insert into cumsum values(1,5000);
+insert into cumsum values(2,4000);
+insert into cumsum values(3,2000);
+insert into cumsum values(4,1000);
+insert into cumsum values(5,10000);
+
+
+select b.id,sum(a.salary) as cumsum
+from cumsum a 
+inner join cumsum b on (b.id >= a.id)
+group by 1;
