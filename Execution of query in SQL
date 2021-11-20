@@ -1,0 +1,25 @@
+How to write?
+SELECT a,sum(salary) as s 
+FROM table1 a 
+INNER JOIN table2 b ON (a.id = b.id)
+WHERE salary > 1000
+GROUP BY a
+HAVING count(distinct id) > 0
+ORDER BY a 
+LIMIT OFFSET
+
+Execution
+
+FROM
+JOIN
+ON
+
+WHERE
+GROUP BY
+HAVING
+SELECT
+DISTINCT
+
+ORDER BY
+LIMIT 2
+OFFSET
