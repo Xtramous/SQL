@@ -1,0 +1,12 @@
+create table abc (id int,name char(8),designation char(8),roll int);
+
+insert into abc values(1,NULL,'Analyst',4);
+insert into abc values(NULL,'Amit',Null,6);
+insert into abc values(3,NULL,NULL,NULL);
+insert into abc values(4,'Rahul','BA',7);
+
+select * from abc
+where (id+roll) is not null;
+
+select * from abc
+where concat(cast(id as char),name,designation,cast(roll as char)) is not null;
